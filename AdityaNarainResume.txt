@@ -74,4 +74,7 @@ Skills
  - Git
  - Jira
  - Aerospike
+ - Kafka
+ - Elasticsearch
+ - Linux
 
