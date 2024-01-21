@@ -1,0 +1,77 @@
+ADITYA NARAIN
+Senior Software Engineer
+
+anarain1989@gmail.com
+Boston, MA
+
+Summary
+======
+As a Tech Lead with over 10 years of experience specializing in backend development and 4+ years in full-stack roles, I bring a proven track record of success in guiding and leading software engineering teams. Proficient in Java, Php,GraphQL,Kafka, TypeScript, and React, I excel in designing and implementing scalable solutions while effectively collaborating with cross-functional teams. I have demonstrated expertise in driving project success, fostering team collaboration, and staying abreast of emerging technologies. I am eager to contribute my leadership skills and technical proficiency to advance innovative software solutions in a challenging role.
+
+
+Experience
+======
+Senior Software Engineer
+Wayfair
+05/2019undefined
+Boston, MA
+As a Tech Lead Full Stack Engineer in Wayfair's post-order team, I am dedicated to elevating the customer experience by streamlining the process for order modifications post-placement
+ - Take an active role contributing to RFCs across various initiatives to enhance the customer experience.
+ - Proactively initiate the creation of real-time user monitoring (RUM) and develop Datadog dashboards for our microservices.
+ - Actively participate in Critical rotations, monitoring Kibana logs, and configuring Datadog alerts to ensure the prevention of new errors.
+ - Lastly, my commitment to code quality is evident in my active participation in code reviews, ensuring the overall health and adherence to standards in the codebase.
+
+Associate Senior Software Engineer
+Oracle Cerner
+2014 - 2019
+Kansas City, MO
+Achieved over 50% enhancement in the efficiency of launching Cerner's RevenueCycle application.
+ - Provided mentorship and management to new team associates.
+ - Optimized the rendering performance of MPage (a Cerner internal component) within the Revenue Cycle application, resulting in a 40% improvement. Simultaneously addressed significant security vulnerabilities.
+ - Developed a pass-through feature facilitating single sign on feature.
+
+
+Education
+======
+Master of Science in Computer Science
+University of Southern California
+2012 - 2014
+Los Angeles, CA
+
+Bachelor of Engineering (Honors) Computer Science
+Birla Institute of Technology and Science, Pilani
+2007 - 2011
+Pilani, Rajasthan, India
+
+
+Strengths
+======
+Efficient Code Writing
+Able to produce efficient and optimized code, leading to 25% faster processing times
+
+Problem Solving
+Expert at solving complex problems, resulting in 60% reduction in production bugs
+
+Collaboration
+Collaborated with cross-functional teams leading to 20% faster time to market
+
+
+Skills
+======
+ - Java
+ - React
+ - Typescript
+ - PHP
+ - Docker
+ - Kubernetes
+ - Datadog
+ - GraphQL
+ - REST
+ - GCP
+ - GBQ
+ - MySQL
+ - Linux
+ - Git
+ - Jira
+ - Aerospike
+
