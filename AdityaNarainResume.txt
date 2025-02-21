@@ -6,7 +6,7 @@ Boston, MA
 
 Summary
 ======
-As a Tech Lead with over 10 years of experience specializing in backend development and 4+ years in full-stack roles, I bring a proven track record of success in guiding and leading software engineering teams. Proficient in Java, Php,GraphQL,Kafka, TypeScript, and React, I excel in designing and implementing scalable solutions while effectively collaborating with cross-functional teams. I have demonstrated expertise in driving project success, fostering team collaboration, and staying abreast of emerging technologies. I am eager to contribute my leadership skills and technical proficiency to advance innovative software solutions in a challenging role.
+As a Tech Lead with over 10 years of experience specializing in backend development and 5+ years in full-stack roles, I bring a proven track record of success in guiding and leading software engineering teams. Proficient in GCP, Java, Php,GraphQL,Kafka, TypeScript, and React, I excel in designing and implementing scalable solutions while effectively collaborating with cross-functional teams. I have demonstrated expertise in driving project success, fostering team collaboration, and staying abreast of emerging technologies. I am eager to contribute my leadership skills and technical proficiency to advance innovative software solutions in a challenging role.
 
 
 Experience
@@ -28,7 +28,7 @@ Kansas City, MO
 Achieved over 50% enhancement in the efficiency of launching Cerner's RevenueCycle application.
  - Provided mentorship and management to new team associates.
  - Optimized the rendering performance of MPage (a Cerner internal component) within the Revenue Cycle application, resulting in a 40% improvement. Simultaneously addressed significant security vulnerabilities.
- - Developed a pass-through feature facilitating single sign on feature.
+ - Developed pass-through feature, leveraging system credentials to enable seamless login to iAware applications without the need for additional authentication prompts.
 
 
 Education
@@ -46,14 +46,17 @@ Pilani, Rajasthan, India
 
 Strengths
 ======
-Efficient Code Writing
-Able to produce efficient and optimized code, leading to 25% faster processing times
+Extensive Industry Experience
+Over 10 years in backend and full-stack software development.
 
-Problem Solving
-Expert at solving complex problems, resulting in 60% reduction in production bugs
+Technical Leadership & System Optimization
+Led and enhanced complex workflow platforms, optimizing critical post-order processes and integrating partner solutions to reduce operational dependencies. Spearheaded high-impact initiatives like migrating support ticketing to a dedicated subgraph, improving scalability and efficiency.
 
-Collaboration
-Collaborated with cross-functional teams leading to 20% faster time to market
+Cost Savings and performance Improvements
+Architected and optimized backend systems, significantly reducing operational costs (e.g., saving Wayfair ~$3.8M) and improving application performance (e.g., boosting Revenue Cycle performance by 50%). Integrated payment workflows and improved observability through real-time logging enhancements.
+
+Leadership And Teamwork Skills
+Actively mentored engineers, led knowledge-sharing initiatives, and played a key role in hiring and RFC reviews.
 
 
 Skills
@@ -74,7 +77,13 @@ Skills
  - Git
  - Jira
  - Aerospike
- - Kafka
  - Elasticsearch
+ - Kafka
  - Linux
+ - Terraform
+ - GCP
+ - Airflow
+ - DBT
+ - GBQ
+ - Grafana
 
