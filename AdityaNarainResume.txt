@@ -1,62 +1,36 @@
 ADITYA NARAIN
-Senior Software Engineer
+Software Engineering Manager
 
 anarain1989@gmail.com
 Boston, MA
 
 Summary
 ======
-As a Tech Lead with over 10 years of experience specializing in backend development and 5+ years in full-stack roles, I bring a proven track record of success in guiding and leading software engineering teams. Proficient in GCP, Java, Php,GraphQL,Kafka, TypeScript, and React, I excel in designing and implementing scalable solutions while effectively collaborating with cross-functional teams. I have demonstrated expertise in driving project success, fostering team collaboration, and staying abreast of emerging technologies. I am eager to contribute my leadership skills and technical proficiency to advance innovative software solutions in a challenging role.
+As a Software Engineering Manager with over 11 years of experience in backend development and full-stack engineering, I lead high-performance teams to create scalable, high-quality software solutions. My technical expertise includes GCP, Java, PHP, GraphQL, Kafka, and Typescript, allowing me to guide architectural decisions while ensuring alignment with business objectives.With a strong background in system design and cross-functional collaboration, I have successfully led complex projects from inception to delivery, mentoring engineers along the way, and fostering a culture of continuous learning and technical excellence. I am passionate about building resilient systems, empowering teams, and staying at the forefront of emerging technologies.
 
 
 Experience
 ======
-Senior Software Engineer
+Software Engineering Manager
 Wayfair
-05/2019undefined
-Boston, MA
-As a Tech Lead Full Stack Engineer in Wayfair's post-order team, I am dedicated to elevating the customer experience by streamlining the process for order modifications post-placement
- - Take an active role contributing to RFCs across various initiatives to enhance the customer experience.
- - Proactively initiate the creation of real-time user monitoring (RUM) and develop Datadog dashboards for our microservices.
- - Actively participate in Critical rotations, monitoring Kibana logs, and configuring Datadog alerts to ensure the prevention of new errors.
- - Lastly, my commitment to code quality is evident in my active participation in code reviews, ensuring the overall health and adherence to standards in the codebase.
+2019 - Ongoing
+Boston, United States
+ - Lead a team of 15+ engineers, driving delivery of scalable, customer-centric software solutions while fostering a high-performing and collaborative team culture.
+ - Owned critical initiatives within the Partner home Portal, enabling suppliers to directly fulfill customer needs through streamlined workflows for replacement parts, units, and support.
+ - Drove strategic alignment by partnering with the Payments team to integrate a novel, standardized payment architecture across all post-order workflows, ensuring consistency, security, and long-term scalability.
+ - Architected and delivered robust backend systems that overhauled the returns process—resulting in $3.8M in annual cost savings and significant operational improvements.
+ - Elevated engineering effectiveness by implementing real-time observability using Datadog and proactively building dashboards and alerts for key microservices.
+ - Contributed to technical strategy and planning through active participation in RFCs and architectural discussions, ensuring scalable solutions aligned with business goals.
+ - Advocated for engineering best practices, leading code reviews and establishing a strong quality-focused development culture across the organization.
 
 Associate Senior Software Engineer
 Oracle Cerner
 2014 - 2019
-Kansas City, MO
-Achieved over 50% enhancement in the efficiency of launching Cerner's RevenueCycle application.
- - Provided mentorship and management to new team associates.
- - Optimized the rendering performance of MPage (a Cerner internal component) within the Revenue Cycle application, resulting in a 40% improvement. Simultaneously addressed significant security vulnerabilities.
- - Developed pass-through feature, leveraging system credentials to enable seamless login to iAware applications without the need for additional authentication prompts.
-
-
-Education
-======
-Master of Science in Computer Science
-University of Southern California
-2012 - 2014
-Los Angeles, CA
-
-Bachelor of Engineering (Honors) Computer Science
-Birla Institute of Technology and Science, Pilani
-2007 - 2011
-Pilani, Rajasthan, India
-
-
-Strengths
-======
-Extensive Industry Experience
-Over 10 years in backend and full-stack software development.
-
-Technical Leadership & System Optimization
-Led and enhanced complex workflow platforms, optimizing critical post-order processes and integrating partner solutions to reduce operational dependencies. Spearheaded high-impact initiatives like migrating support ticketing to a dedicated subgraph, improving scalability and efficiency.
-
-Cost Savings and performance Improvements
-Architected and optimized backend systems, significantly reducing operational costs (e.g., saving Wayfair ~$3.8M) and improving application performance (e.g., boosting Revenue Cycle performance by 50%). Integrated payment workflows and improved observability through real-time logging enhancements.
-
-Leadership And Teamwork Skills
-Actively mentored engineers, led knowledge-sharing initiatives, and played a key role in hiring and RFC reviews.
+Kansas City, United States
+ - Increased the efficiency of launching Cerner's RevenueCycle application by more than 50%.
+ - Mentored and managed new team members, fostering their development and integration.
+ - Enhanced the rendering performance of MPage, an internal Cerner component within the RevenueCycle app, leading to a 40% improvement while simultaneously addressing critical security vulnerabilities.
+ - Developed a pass-through feature utilizing system credentials to facilitate seamless login to iAware applications, eliminating the need for additional authentication prompts.
 
 
 Skills
@@ -86,4 +60,17 @@ Skills
  - DBT
  - GBQ
  - Grafana
+
+
+Education
+======
+Master of Science in Computer Science
+University of Southern California
+2012 - 2014
+Los Angeles, CA
+
+Bachelor of Engineering (Honors) Computer Science
+Birla Institute of Technology and Science, Pilani
+2007 - 2011
+Pilani, Rajasthan, India
 
