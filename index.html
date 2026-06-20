@@ -1,460 +1,1046 @@
 <!DOCTYPE html>
-<html>
-<title>Aditya Narain</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Narain — Senior Engineering Manager</title>
+  <meta name="description" content="Aditya Narain — Senior Engineering Manager leading AI platforms, developer tooling, and enterprise systems at scale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --primary-light: #a5b4fc;
+      --accent: #06b6d4;
+      --accent-light: #67e8f9;
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --border: #334155;
+      --gradient-1: linear-gradient(135deg, #6366f1, #06b6d4);
+      --gradient-2: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+      --radius: 16px;
+      --radius-sm: 8px;
+    }
 
-  body {
-    font-family: "Roboto", sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-  }
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+      --border: #e2e8f0;
+      --gradient-2: linear-gradient(135deg, #f8fafc 0%, #eef2ff 50%, #f8fafc 100%);
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    }
 
-  /* Sticky Navigation */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #009688;
-    padding: 10px 0;
-    transition: background-color 0.3s;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    transition: opacity 0.3s;
-  }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
 
-  .navbar a:hover {
-    opacity: 0.8;
-  }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
 
-  /* Dark mode styles */
-  body.dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
 
-  .dark-mode .w3-white {
-    background-color: #444 !important;
-    color: #fff !important;
-  }
+    [data-theme="light"] nav {
+      background: rgba(248, 250, 252, 0.85);
+    }
 
-  .dark-mode .w3-text-grey {
-    color: #ddd !important;
-  }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
 
-  /* Theme toggle button */
-  #theme-toggle {
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    z-index: 1001;
-    padding: 10px;
-    border-radius: 50%;
-    border: none;
-    background: #009688;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-  #theme-toggle:hover {
-    background: #007166;
-  }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
 
-  /* Skills categories */
-  .skills-category {
-    margin-bottom: 20px;
-  }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
 
-  .skills-category h4 {
-    color: #009688;
-    margin-bottom: 10px;
-  }
+    .nav-links a:hover {
+      color: var(--primary-light);
+    }
 
-  /* Content padding for fixed navbar */
-  .content-wrapper {
-    padding-top: 60px;
-  }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-1);
+      transition: width 0.3s ease;
+    }
 
-  /* Smooth transitions */
-  .w3-container,
-  .w3-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
-  .w3-container:hover,
-  .w3-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-</style>
+    .theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
 
-<body class="w3-light-grey">
-  <!-- Navigation Bar -->
-  <div class="navbar">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div>
+    .theme-toggle:hover {
+      background: var(--bg-card-hover);
+      transform: rotate(180deg);
+    }
 
-  <!-- Theme Toggle Button -->
-  <button id="theme-toggle">
-    <i class="fa fa-moon-o"></i>
-  </button>
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
 
-  <!-- Page Container -->
-  <div class="w3-content w3-margin-top content-wrapper" style="max-width:1400px;">
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
+      background: var(--gradient-2);
+      position: relative;
+      overflow: hidden;
+    }
 
-    <!-- The Grid -->
-    <div class="w3-row-padding">
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+    }
 
-      <!-- Left Column -->
-      <div class="w3-third">
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite reverse;
+    }
 
-        <div class="w3-white w3-text-grey w3-card-4">
-          <div class="w3-display-container">
-            <img src="./adi_pic.jpg" style="width:60%" alt="Avatar">
-            <div class="w3-display-bottomleft w3-container w3-text-white">
-              <h2>Aditya Narain</h2>
-            </div>
-          </div>
-          <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software Engineering Manager
-            </p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Boston, MA</p>
-            <hr>
-            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills and
-                Technologies</b></p>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-30px); }
+    }
 
-            <div class="skills-category">
-              <h4><i class="fa fa-code w3-margin-right"></i>Programming Languages</h4>
-              <p>Java</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">Expert</div>
-              </div>
-              <p>PHP</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">Intermediate</div>
-              </div>
-              <p>TypeScript</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">Intermediate</div>
-              </div>
-            </div>
+    .hero-content {
+      max-width: 900px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
 
-            <div class="skills-category">
-              <h4><i class="fa fa-cloud w3-margin-right"></i>Cloud & Infrastructure</h4>
-              <p>Google Cloud Platform (GCP)</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">Expert</div>
-              </div>
-              <p>Docker</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">Advanced</div>
-              </div>
-              <p>Kubernetes</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">Advanced</div>
-              </div>
-              <p>Terraform</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">Intermediate</div>
-              </div>
-            </div>
+    .hero-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid var(--primary);
+      box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+      margin-bottom: 2rem;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
 
-            <div class="skills-category">
-              <h4><i class="fa fa-database w3-margin-right"></i>Databases & Data</h4>
-              <p>MySQL and GBQ</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">Advanced</div>
-              </div>
-              <p>Aerospike</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">Intermediate</div>
-              </div>
-              <p>Data Build Tool (DBT)</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">Advanced</div>
-              </div>
-            </div>
+    @keyframes glow {
+      from { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
+      to { box-shadow: 0 0 40px rgba(99, 102, 241, 0.4); }
+    }
 
-            <div class="skills-category">
-              <h4><i class="fa fa-cogs w3-margin-right"></i>DevOps & Monitoring</h4>
-              <p>Datadog</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">Expert</div>
-              </div>
-              <p>Grafana</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">Expert</div>
-              </div>
-              <p>Kibana</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">Expert</div>
-              </div>
-              <p>Splunk</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">Intermediate</div>
-              </div>
-            </div>
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
 
-            <div class="skills-category">
-              <h4><i class="fa fa-code-fork w3-margin-right"></i>Tools & Frameworks</h4>
-              <p>Git</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">Expert</div>
-              </div>
-              <p>GraphQL</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">Expert</div>
-              </div>
-              <p>Apollo (Server & Client)</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">Advanced</div>
-              </div>
-              <p>Jira</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">Expert</div>
-              </div>
-            </div>
-            <br>
-          </div>
-        </div><br>
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
 
-        <!-- End Left Column -->
+    .hero-subtitle .highlight {
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: var(--gradient-1);
+      color: white;
+      border: none;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 2px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* ===== METRICS ===== */
+    .metrics {
+      padding: 4rem 2rem;
+      background: var(--bg);
+    }
+
+    .metrics-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .metric-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.3s ease;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .metric-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-label {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .experience-item {
+      position: relative;
+      padding: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .experience-role {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .experience-company {
+      color: var(--primary-light);
+      font-weight: 500;
+    }
+
+    .experience-meta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    .experience-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--primary-light);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .experience-section-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 1.25rem 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .experience-section-title i {
+      font-size: 0.8rem;
+    }
+
+    .experience-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .experience-bullets li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .experience-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .experience-bullets li strong {
+      color: var(--text);
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category {
+      padding: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.3s ease;
+    }
+
+    .skill-category:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .skill-category-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(99, 102, 241, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--primary-light);
+      font-size: 1.2rem;
+    }
+
+    .skill-category-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      padding: 0.3rem 0.75rem;
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+      border-color: var(--primary);
+      color: var(--primary-light);
+      background: rgba(99, 102, 241, 0.15);
+    }
+
+    /* ===== EDUCATION ===== */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .education-card {
+      padding: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.3s ease;
+    }
+
+    .education-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .education-degree {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .education-school {
+      color: var(--primary-light);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-year {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .footer-link:hover {
+      border-color: var(--primary);
+      color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .footer-text {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border);
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero {
+        padding: 5rem 1.5rem 3rem;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .experience-header {
+        flex-direction: column;
+      }
+
+      section {
+        padding: 3rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">AN</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </div>
-
-      <!-- Right Column -->
-      <div class="w3-twothird">
-
-        <div id="about" class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16"><i
-              class="fa fa-bolt fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Objective</h2>
-          <div class="w3-container">
-            <p>As a Software Engineering Manager with over 11 years of experience in backend development and full-stack
-              engineering, I
-              lead high- performance teams to create scalable, high-quality software solutions. My technical expertise
-              includes GCP,
-              Java, PHP, GraphQL, Kafka, and Typescript, allowing me to guide architectural decisions while ensuring
-              alignment with
-              business objectives.
-              With a strong background in system design and cross-functional collaboration, I have successfully led
-              complex projects
-              from inception to delivery, mentoring engineers along the way, and fostering a culture of continuous
-              learning and
-              technical excellence. I am passionate about building resilient systems, empowering teams, and staying at
-              the forefront
-              of emerging technologies.</p>
-          </div>
-        </div>
-        <div id="experience" class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16"><i
-              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Software Engineering Manager / Wayfair</b></h5>
-            <span class="w3-tag w3-green">Boston, MA</span>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2019 - <span
-                class="w3-tag w3-teal w3-round">Current</span></h6>
-            <ul>
-              <li>Lead a team of 15 engineers, driving delivery of scalable, customer- centric software solutions while
-                fostering a high-performing and collaborative team culture.</li>
-              <li>
-                Owned critical initiatives within the Partner home Portal, enabling suppliers to directly fulfill
-                customer needs through streamlined workflows for replacement parts, units, and support.
-              </li>
-              <li>
-                Drove strategic alignment by partnering with the Payments team to integrate a novel, standardized
-                payment architecture across all post- order workflows, ensuring consistency, security, and long-term
-                scalability.
-              </li>
-              <li>
-                Architected and delivered robust backend systems that overhauled the returns process—resulting in $3.8M
-                in annual cost savings and significant operational improvements.
-              </li>
-              <li>
-                Elevated engineering effectiveness by implementing real-time observability using Datadog and proactively
-                building dashboards and alerts for key microservices.
-              </li>
-              <li>
-                Contributed to technical strategy and planning through active participation in RFCs and architectural
-                discussions, ensuring scalable solutions aligned with business goals.
-              </li>
-              <li>
-                Advocated for engineering best practices, leading code reviews and establishing a strong quality-focused
-                development culture across the organization.
-              </li>
-            </ul>
-            <hr>
-          </div>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Associate Senior Software Engineer / Oracle Cerner</b></h5>
-            <span class="w3-tag w3-green">Kansas City, MO</span>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2014 - May 2019</span></h6>
-            <ul>
-              <li>Boosted the performance of the Revenue Cycle application by over 50% through parallel processing,
-                significantly
-                improving load times.</li>
-              <li>Designed and improved the performance of MPage rendering within Cerner’s Revenue Cycle application by
-                40% and fixed major security flaws.</li>
-              <li>Designed single instance feature project where an application would launch single instance of another
-                application and would automatically change the patient context when required.</li>
-              <li>Maintaining Central service framework that manages large-scale patient data.</li>
-              <li>Developed framework for embedding MPages within Orion framework using Ruby on Rails. Used docker for
-                building application. This was pursued as
-                revenuecycle hackathon project</li>
-              <li>Worked on pass-through feature that would use systems credential to automatically login to any iAware
-                applications without asking for additional authentication. </li>
-              <li>Designed Message Center notifications feature that would poll for new incoming messages.</li>
-              <li>Took initiative of introducing Splunk in the team for analyzing application logs in different domains
-                and proactively logging JIRA and fixing before being reported. This improved team performance
-                tremendously.</li>
-              <li>Worked extensively on troubleshooting and fixing major internal and external client issues related to
-                performance of application</li>
-            </ul>
-            <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Software Engineer Intern / Network Automation</b></h5>
-            <span class="w3-tag w3-green">Los Angeles, CA</span>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2014 - May 2014</h6>
-            <ul>
-              <li>Developed and tested features of Automate 10.0.2, network automation proprietary software providing
-                central management hub for administration of all automation assets.</li>
-              <li>Worked on Amazon EC2 and Map Reduce API for automating and testing large computations on a dataset.
-              </li>
-            </ul>
-            <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Software Engineer in Test Intern / Teradata Corporation</b></h5>
-            <span class="w3-tag w3-green">San Franscisco Bay Area, CA</span>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2013 - Aug 2013</h6>
-            <ul>
-              <li>Worked on creating NCLI plugin that would check the integrity of database during an upgrade of
-                cluster. </li>
-              <li>Designed stress performance framework for all cluster nodes that would graphically show its real time
-                data using d3.js.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="education" class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16"><i
-              class="fa fa-university fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>University of Southern California</b></h5>
-            <span class="w3-tag w3-green">Los Angeles, CA</span>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012-2014</h6>
-            <p>
-            <h4>M.S. Computer Science</h4>
-            </p>
-            <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Birla Institute of Technology and Science</b></h5>
-            <span class="w3-tag w3-green">Pilani, Rajasthan</span>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2007 - 2011</h6>
-            <p>
-            <h4>B.E(Hons) Computer Science</h4>
-            </p>
-            <hr>
-          </div>
-        </div>
-
-        <!-- End Right Column -->
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-
-      <!-- End Grid -->
     </div>
+  </nav>
 
-    <!-- End Page Container -->
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="hero-content">
+      <img src="./adi_pic.jpg" alt="Aditya Narain" class="hero-avatar">
+      <h1 class="hero-title">Aditya Narain</h1>
+      <p class="hero-subtitle">
+        <span class="highlight">Senior Engineering Manager</span> &nbsp;|&nbsp; Boston, MA
+      </p>
+      <p class="hero-description">
+        Engineering leader with 11+ years building and scaling AI platforms, enterprise tooling, and high-performing teams.
+        Currently leading 15+ engineers at Wayfair — driving an AI Virtual Assistant that cut follow-on contacts by 45%
+        and a platform that improved developer velocity by 60%.
+      </p>
+      <div class="hero-cta">
+        <a href="./AdityaNarainResume.pdf" class="btn btn-primary" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <a href="https://www.linkedin.com/in/adityanarain1989/" class="btn btn-outline" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/aditya-narain" class="btn btn-outline" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics -->
+  <div class="metrics">
+    <div class="metrics-grid">
+      <div class="metric-card fade-in">
+        <div class="metric-number">45%</div>
+        <div class="metric-label">Reduction in Follow-On Contact Rate</div>
+      </div>
+      <div class="metric-card fade-in">
+        <div class="metric-number">60%</div>
+        <div class="metric-label">Developer Velocity Improvement</div>
+      </div>
+      <div class="metric-card fade-in">
+        <div class="metric-number">15+</div>
+        <div class="metric-label">Engineers Led</div>
+      </div>
+      <div class="metric-card fade-in">
+        <div class="metric-number">11+</div>
+        <div class="metric-label">Years of Experience</div>
+      </div>
+    </div>
   </div>
 
-  <footer id="contact" class="w3-container w3-teal w3-center w3-margin-top">
-    <div class="w3-padding-32">
-      <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half">
-          <h3>Download Resume</h3>
-          <div class="w3-padding-16">
-            <a href="./AdityaNarainResume.pdf" class="w3-button w3-white w3-round-large" download>
-              <i class="fa fa-file-pdf-o w3-margin-right"></i>Download PDF
-            </a>
-            <a href="./AdityaNarainResume.txt" class="w3-button w3-white w3-round-large" download>
-              <i class="fa fa-file-text-o w3-margin-right"></i>Download Text
-            </a>
+  <!-- Experience -->
+  <section id="experience">
+    <div class="section-container">
+      <div class="section-header fade-in">
+        <div class="section-label">Career</div>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <!-- Wayfair -->
+      <div class="experience-item fade-in">
+        <div class="experience-header">
+          <div>
+            <div class="experience-role">Senior Software Engineering Manager</div>
+            <div class="experience-company">Wayfair</div>
+          </div>
+          <div class="experience-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Boston, MA</span>
+            <span class="experience-tag">2019 – Present</span>
           </div>
         </div>
-        <div class="w3-half">
-          <h3>Connect With Me</h3>
-          <div class="w3-padding-16">
-            <a href="https://www.linkedin.com/in/adityanarain1989/"
-              class="w3-button w3-white w3-round-large w3-margin-right">
-              <i class="fa fa-linkedin w3-margin-right"></i>LinkedIn
-            </a>
-            <a href="https://github.com/aditya-narain" class="w3-button w3-white w3-round-large w3-margin-right">
-              <i class="fa fa-github w3-margin-right"></i>GitHub
-            </a>
-            <a href="https://www.facebook.com/adi.narain" class="w3-button w3-white w3-round-large">
-              <i class="fa fa-facebook w3-margin-right"></i>Facebook
-            </a>
+
+        <div class="experience-section-title">
+          <i class="fas fa-users"></i> Organizational Leadership
+        </div>
+        <ul class="experience-bullets">
+          <li>Lead and grow a <strong>15+ person engineering organization</strong> spanning Ticketing and AI/XOP platform teams — own staffing, performance calibration, and career pathing across IC and management tracks.</li>
+          <li>Grew multiple engineers to senior/staff level; established brown bag sessions, Tech Transformation Initiatives (TTR) in scoping, and structured mentorship programs.</li>
+          <li>Engineering owner for platform strategy, influencing Director-level roadmap prioritization and aligning with Product, Operations, and Data Science stakeholders.</li>
+        </ul>
+
+        <div class="experience-section-title">
+          <i class="fas fa-robot"></i> AI Virtual Assistant & Experience Orchestration Platform (XOP)
+        </div>
+        <ul class="experience-bullets">
+          <li>Owned the engineering strategy for an in-house <strong>AI Virtual Assistant</strong> built on Vertex AI, enabling customers to self-resolve post-order issues. <strong>Reduced Follow-On Contact Rate (FOCR) by 45%</strong>, directly lowering cost-to-serve.</li>
+          <li>Led the implementation of the <strong>Policy Management Service</strong> with Staff Engineering and Product — centralized enforcement of post-order policies across AI-driven and agent-assisted workflows, aligned with business stakeholders.</li>
+          <li>Drove <strong>XOP platform strategy</strong>: composable workflow engine (UI + non-UI) that <strong>improved developer velocity by 60%</strong> — reducing build time from a full quarter to ~15 days.</li>
+          <li>Own RAG-based retrieval pipelines, LLM-powered decisioning, and automated multi-step customer experiences at production scale.</li>
+        </ul>
+
+        <div class="experience-section-title">
+          <i class="fas fa-ticket-alt"></i> SupportHub & ProjectHub — Enterprise Ticketing
+        </div>
+        <ul class="experience-bullets">
+          <li>Own internal customer support ticketing platforms (Jira Service Management), serving <strong>hundreds of agents</strong> with 99.9%+ availability targets.</li>
+          <li>Lead <strong>Jira DC → Cloud migration</strong>: designed API/webhook gateways decoupling 20+ consumers, coordinated LTS upgrades with Infra, DB, and Atlassian.</li>
+          <li>Launched proactive monitoring autoclose (Pub/Sub, Kafka, Scribe) — <strong>reduced manual ticket operations ~30%</strong>.</li>
+          <li>Established SLO-driven reliability culture: Datadog/Grafana observability, blameless incident reviews, production readiness standards.</li>
+        </ul>
+      </div>
+
+      <!-- Oracle Cerner -->
+      <div class="experience-item fade-in">
+        <div class="experience-header">
+          <div>
+            <div class="experience-role">Associate Senior Software Engineer</div>
+            <div class="experience-company">Oracle Cerner</div>
+          </div>
+          <div class="experience-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Kansas City, MO</span>
+            <span class="experience-tag">2014 – 2019</span>
+          </div>
+        </div>
+        <ul class="experience-bullets">
+          <li>Engineered and optimized core <strong>RevenueCycle platform</strong> components (healthcare billing), improving application performance by <strong>50%+</strong> through parallel processing.</li>
+          <li>Identified and remediated critical security vulnerabilities in production systems serving hospital networks.</li>
+          <li>Mentored junior engineers, led technical onboarding, and drove code quality improvements across the team.</li>
+        </ul>
+      </div>
+
+      <!-- Internships (collapsed) -->
+      <div class="experience-item fade-in">
+        <div class="experience-header">
+          <div>
+            <div class="experience-role">Software Engineering Internships</div>
+            <div class="experience-company">Network Automation &bull; Teradata</div>
+          </div>
+          <div class="experience-meta">
+            <span><i class="fas fa-map-marker-alt"></i> California</span>
+            <span class="experience-tag">2013 – 2014</span>
+          </div>
+        </div>
+        <ul class="experience-bullets">
+          <li>Built network automation software features and worked with Amazon EC2 / MapReduce for large-scale data processing.</li>
+          <li>Designed stress-testing frameworks and database integrity tools for distributed cluster environments.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" style="background: var(--bg-card);">
+    <div class="section-container">
+      <div class="section-header fade-in">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon"><i class="fas fa-code"></i></div>
+          <div class="skill-category-title">Languages & Frameworks</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">REST</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon"><i class="fas fa-brain"></i></div>
+          <div class="skill-category-title">AI & Machine Learning</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Vertex AI</span>
+            <span class="skill-tag">LLM Orchestration</span>
+            <span class="skill-tag">RAG Pipelines</span>
+            <span class="skill-tag">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon"><i class="fas fa-database"></i></div>
+          <div class="skill-category-title">Data & Messaging</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Kafka</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Elasticsearch</span>
+            <span class="skill-tag">Aerospike</span>
+            <span class="skill-tag">Pub/Sub</span>
+            <span class="skill-tag">BigQuery</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon"><i class="fas fa-cloud"></i></div>
+          <div class="skill-category-title">Cloud & Infrastructure</div>
+          <div class="skill-tags">
+            <span class="skill-tag">GCP</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">Airflow</span>
+            <span class="skill-tag">dbt</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="skill-category-title">Observability & Ops</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Datadog</span>
+            <span class="skill-tag">Grafana</span>
+            <span class="skill-tag">SLOs/SLIs</span>
+            <span class="skill-tag">Incident Management</span>
+            <span class="skill-tag">On-Call</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <div class="skill-category-icon"><i class="fas fa-users-cog"></i></div>
+          <div class="skill-category-title">Leadership</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Org Design</span>
+            <span class="skill-tag">Brown Bags & TTR</span>
+            <span class="skill-tag">Performance Calibration</span>
+            <span class="skill-tag">Program Management</span>
+            <span class="skill-tag">Talent Development</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="section-container">
+      <div class="section-header fade-in">
+        <div class="section-label">Background</div>
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="education-grid">
+        <div class="education-card fade-in">
+          <div class="education-degree">M.S. Computer Science</div>
+          <div class="education-school">University of Southern California</div>
+          <div class="education-year"><i class="fas fa-calendar-alt"></i> 2012 – 2014 &nbsp;|&nbsp; Los Angeles, CA</div>
+        </div>
+        <div class="education-card fade-in">
+          <div class="education-degree">B.E. (Hons.) Computer Science</div>
+          <div class="education-school">BITS Pilani</div>
+          <div class="education-year"><i class="fas fa-calendar-alt"></i> 2007 – 2011 &nbsp;|&nbsp; Pilani, India</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <div class="section-container">
+      <div class="section-header fade-in" style="text-align: center;">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Let's Connect</h2>
+      </div>
+
+      <div class="footer-links fade-in">
+        <a href="mailto:anarain1989@gmail.com" class="footer-link">
+          <i class="fas fa-envelope"></i> anarain1989@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/adityanarain1989/" class="footer-link" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/aditya-narain" class="footer-link" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+
+
     </div>
   </footer>
 
   <script>
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
     const icon = themeToggle.querySelector('i');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+
+    if (savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
 
     themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        icon.classList.remove('fa-moon-o');
-        icon.classList.add('fa-sun-o');
+      const current = document.documentElement.getAttribute('data-theme');
+      if (current === 'light') {
+        document.documentElement.removeAttribute('data-theme');
+        icon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'dark');
       } else {
-        icon.classList.remove('fa-sun-o');
-        icon.classList.add('fa-moon-o');
+        document.documentElement.setAttribute('data-theme', 'light');
+        icon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'light');
       }
     });
 
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const menuIcon = mobileMenuBtn.querySelector('i');
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-xmark');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const menuIcon = mobileMenuBtn.querySelector('i');
+        menuIcon.classList.add('fa-bars');
+        menuIcon.classList.remove('fa-xmark');
       });
     });
 
-    // Navbar background change on scroll
-    window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(0, 150, 136, 0.95)';
-      } else {
-        navbar.style.backgroundColor = '#009688';
-      }
-    });
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
 </body>
-
 </html>
